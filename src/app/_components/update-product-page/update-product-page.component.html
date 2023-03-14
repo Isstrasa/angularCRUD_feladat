@@ -1,0 +1,28 @@
+<div>
+    <form [formGroup]="productForm">
+        <select formControlName="productId">
+            <option *ngFor="let product of products" [value]="product.id">{{ product.name }}</option>
+        </select>
+        <div class="formElement">
+            <label>*Name: </label>
+            <input formControlName="name" type="text">
+        </div>
+        <div class="formElement">
+            <label>Size: </label>
+            <input formControlName="size" type="text">
+        </div>
+        <div class="formElement">
+            <label>*Price: </label>
+            <input formControlName="price" type="text">
+        </div>
+        <div class="formElement">
+            <label>Available: </label>
+            <select formControlName="is_available">
+                <option value="true">true</option>
+                <option value="false">false</option>
+            </select>
+        </div>
+        <button (click)="updateProduct()">Update</button>
+    </form>
+</div>
+{{ log }}

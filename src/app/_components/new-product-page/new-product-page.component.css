@@ -1,0 +1,7 @@
+form{
+    display: flex;
+}
+
+.formElement{
+    margin-right: 10px;
+}

@@ -1,0 +1,25 @@
+<div>
+    <form class="form" [formGroup]="newProductForm">
+        <div class="formElement">
+            <label>*Name: </label>
+            <input formControlName="name" type="text">
+        </div>
+        <div class="formElement">
+            <label>Size: </label>
+            <input formControlName="size"  type="text">
+        </div>
+        <div class="formElement">
+            <label>*Price: </label>
+            <input formControlName="price"  type="text">
+        </div>
+        <div class="formElement">
+            <label>Available: </label>
+            <select formControlName="is_available" [(ngModel)]="selectedValue">
+                <option value="true" selected>true</option>
+                <option value="false">false</option>
+            </select>
+        </div>  
+        <button (click)="addNewProduct()" [disabled]="newProductForm.invalid">Új Termék felvétele</button>
+    </form>
+    {{ log }}
+</div>
